@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vencimento</title>
-  <meta name="description" content="Informacao legal e suporte da app Vencimento.">
+  <title>Vencimento | App de turnos e recibo para enfermeiros</title>
+  <meta name="description" content="Vencimento é uma app iOS feita por enfermeiros para organizar turnos, estimar remuneração, acompanhar recibos e gerir acumulação.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Vencimento</a>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="" width="34" height="34">
+      <span>Vencimento</span>
+    </a>
     <nav aria-label="Navegacao principal">
       <a href="privacidade.html">Privacidade</a>
       <a href="termos.html">Termos</a>
@@ -19,30 +22,94 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div>
-        <p class="eyebrow">App iOS</p>
-        <h1>Informacao oficial da app Vencimento</h1>
-        <p class="lead">Consulta a politica de privacidade, os termos de utilizacao, instrucoes de uso e os canais de suporte da aplicacao.</p>
+    <section class="hero marketing-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">App iOS para enfermagem</p>
+        <h1>Turnos, suplementos e recibo num só lugar.</h1>
+        <p class="lead">Vencimento ajuda enfermeiros a organizar horários, estimar remuneração mensal e perceber melhor o impacto de noites, fins de semana, feriados, horas extra e acumulação.</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="ajuda.html">Ver como funciona</a>
+          <a class="secondary-action" href="privacidade.html">Privacidade</a>
+        </div>
+      </div>
+
+      <div class="app-showcase" aria-label="Resumo da app Vencimento">
+        <img class="app-logo" src="assets/logo.jpeg" alt="Logo da app Vencimento" width="120" height="120">
+        <div class="showcase-panel">
+          <p class="panel-label">Estimativa mensal</p>
+          <strong>Recibo mais claro antes de sair</strong>
+          <span>Turnos registados, suplementos calculados e acumulação separada.</span>
+        </div>
+        <div class="mini-metrics" aria-label="Funcionalidades principais">
+          <span>Horário</span>
+          <span>Recibo</span>
+          <span>SIADAP</span>
+        </div>
       </div>
     </section>
 
-    <section class="link-grid" aria-label="Paginas legais, ajuda e suporte">
+    <section class="credibility-strip" aria-label="Contexto da aplicação">
+      <div>
+        <span>Feita por enfermeiros</span>
+        <p>Desenhada a partir das dúvidas reais de quem trabalha por turnos e precisa de conferir remuneração variável.</p>
+      </div>
+      <div>
+        <span>Foco no SNS e saúde</span>
+        <p>Preparada para horários complexos, noites, feriados, folgas, faltas, férias e trabalho suplementar.</p>
+      </div>
+      <div>
+        <span>Cálculos transparentes</span>
+        <p>Ajuda a comparar estimativas com o recibo oficial, sem substituir a confirmação dos serviços.</p>
+      </div>
+    </section>
+
+    <section class="feature-grid" aria-label="Funcionalidades da app">
+      <article>
+        <span class="feature-icon">01</span>
+        <h2>Calendário feito para turnos</h2>
+        <p>Regista turnos, folgas, férias, faltas, atividades extra e acumulação com uma navegação simples por mês.</p>
+      </article>
+      <article>
+        <span class="feature-icon">02</span>
+        <h2>Estimativa de vencimento</h2>
+        <p>Calcula remuneração base, suplementos, horas extra, subsídios, IRS, Segurança Social e descontos adicionais.</p>
+      </article>
+      <article>
+        <span class="feature-icon">03</span>
+        <h2>Acumulação editável</h2>
+        <p>Configura diferentes empregos, turnos, valores hora e majorações por escalões de horas mensais.</p>
+      </article>
+      <article>
+        <span class="feature-icon">04</span>
+        <h2>Visão profissional</h2>
+        <p>Acompanha estatísticas, tendências de carga horária, recibo estimado e informação SIADAP no mesmo espaço.</p>
+      </article>
+    </section>
+
+    <section class="nurse-made">
+      <div>
+        <p class="eyebrow">Porque isto importa</p>
+        <h2>Quem faz turnos sabe que o recibo nunca é só salário base.</h2>
+      </div>
+      <p>Vencimento nasce para reduzir contas manuais e dúvidas recorrentes: “quantas noites fiz?”, “quanto valeu este fim de semana?”, “a acumulação está certa?”, “o recibo bate certo com o meu horário?”. A app organiza estes dados para que cada enfermeiro consiga acompanhar o mês com mais confiança.</p>
+    </section>
+
+    <section class="link-grid" aria-label="Páginas legais, ajuda e suporte">
       <a class="link-card" href="privacidade.html">
-        <span>Politica de Privacidade</span>
-        <p>Como a app trata dados de horarios, remuneracao, recibos, estatisticas e notificacoes.</p>
+        <span>Política de Privacidade</span>
+        <p>Como a app trata dados de horários, remuneração, recibos, estatísticas e notificações.</p>
       </a>
       <a class="link-card" href="termos.html">
-        <span>Termos de Utilizacao</span>
-        <p>Regras de uso, limitacoes dos calculos e responsabilidade do utilizador.</p>
+        <span>Termos de Utilização</span>
+        <p>Regras de uso, limitações dos cálculos e responsabilidade do utilizador.</p>
       </a>
       <a class="link-card" href="ajuda.html">
         <span>Como usar</span>
-        <p>Instrucoes para configurar a app, registar turnos, sincronizar calendario e consultar o recibo.</p>
+        <p>Instruções para configurar a app, registar turnos, sincronizar calendário e consultar o recibo.</p>
       </a>
       <a class="link-card" href="suporte.html">
         <span>Suporte</span>
-        <p>Contactos e informacao util para pedidos de ajuda, feedback ou remocao de dados.</p>
+        <p>Contactos e informação útil para pedidos de ajuda, feedback ou remoção de dados.</p>
       </a>
     </section>
   </main>
