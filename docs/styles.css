@@ -1,0 +1,189 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f4;
+  --panel: #ffffff;
+  --text: #1e2528;
+  --muted: #607078;
+  --line: #d9dedb;
+  --accent: #0f766e;
+  --accent-dark: #134e4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 22px 20px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--accent-dark);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--accent-dark);
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+}
+
+.hero {
+  min-height: 52vh;
+  display: grid;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 780px;
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 5.2rem);
+  line-height: 0.98;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.link-card {
+  min-height: 170px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  text-decoration: none;
+}
+
+.link-card span {
+  display: block;
+  color: var(--accent-dark);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.link-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
+.legal {
+  max-width: 780px;
+}
+
+.legal h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  margin-bottom: 28px;
+}
+
+.legal h2 {
+  margin: 34px 0 8px;
+  font-size: 1.2rem;
+}
+
+.legal p,
+.legal li {
+  color: var(--muted);
+}
+
+.legal ol,
+.legal ul {
+  padding-left: 22px;
+}
+
+.legal strong {
+  color: var(--text);
+}
+
+.contact a {
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+footer {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero {
+    min-height: 48vh;
+  }
+
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 980px) {
+  .link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
