@@ -9,7 +9,10 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">Vencimento</a>
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="" width="34" height="34">
+      <span>Vencimento</span>
+    </a>
     <nav aria-label="Navegacao principal">
       <a href="privacidade.html">Privacidade</a>
       <a href="termos.html">Termos</a>
@@ -18,20 +21,67 @@
     </nav>
   </header>
 
-  <main class="legal">
+  <main class="legal support-page">
     <p class="eyebrow">Ajuda</p>
     <h1>Suporte</h1>
-    <p>Para pedidos de ajuda, feedback, questoes sobre privacidade ou pedidos relacionados com dados, envia uma mensagem para:</p>
+    <p>Para pedidos de ajuda, feedback, questões sobre privacidade ou pedidos relacionados com dados, usa o formulário abaixo ou envia uma mensagem direta.</p>
 
     <p class="contact"><a href="mailto:suporte@exemplo.com">suporte@exemplo.com</a></p>
 
-    <h2>Inclui no pedido</h2>
-    <ul>
-      <li>Modelo do iPhone e versao do iOS.</li>
-      <li>Versao da app Vencimento.</li>
-      <li>Descricao breve do problema ou pedido.</li>
-      <li>Passos para reproduzir o erro, se aplicavel.</li>
-    </ul>
+    <section class="support-layout" aria-label="Pedido de suporte">
+      <form class="contact-form" action="mailto:suporte@exemplo.com" method="post" enctype="text/plain">
+        <div class="form-row">
+          <label for="name">Nome</label>
+          <input id="name" name="Nome" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="Email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="subject">Assunto</label>
+          <select id="subject" name="Assunto" required>
+            <option value="">Seleciona uma opção</option>
+            <option>Ajuda com a app</option>
+            <option>Erro ou comportamento inesperado</option>
+            <option>Privacidade ou dados</option>
+            <option>Sugestão de melhoria</option>
+            <option>Outro pedido</option>
+          </select>
+        </div>
+
+        <div class="form-row two-columns">
+          <div>
+            <label for="device">Modelo do iPhone</label>
+            <input id="device" name="Modelo do iPhone" type="text" placeholder="Ex.: iPhone 15">
+          </div>
+          <div>
+            <label for="ios">Versão iOS</label>
+            <input id="ios" name="Versão iOS" type="text" placeholder="Ex.: iOS 18">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="Mensagem" rows="7" placeholder="Descreve o problema, o que estavas a fazer e, se possível, os passos para reproduzir." required></textarea>
+        </div>
+
+        <button class="primary-action form-submit" type="submit">Enviar pedido</button>
+        <p class="form-note">Ao enviar, o teu cliente de email será aberto com estes dados. A app Vencimento não recolhe esta informação através do site.</p>
+      </form>
+
+      <aside class="support-tips">
+        <h2>Ajuda-nos a responder mais depressa</h2>
+        <ul>
+          <li>Inclui a versão da app Vencimento.</li>
+          <li>Indica o mês/área da app onde surgiu a dúvida.</li>
+          <li>Explica se o problema acontece sempre ou apenas em alguns turnos.</li>
+          <li>Não envies dados clínicos ou informação sensível de terceiros.</li>
+        </ul>
+      </aside>
+    </section>
   </main>
 
   <footer>
