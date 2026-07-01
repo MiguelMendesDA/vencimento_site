@@ -307,6 +307,63 @@ h1 {
   color: var(--warm);
 }
 
+.download-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.78fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 28px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.download-section h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+.download-section p:not(.eyebrow) {
+  max-width: 640px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.download-card {
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+  padding: 22px;
+  border-radius: 8px;
+  background: var(--accent-soft);
+}
+
+.download-card img {
+  width: 82px;
+  height: 82px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(16, 32, 34, 0.16);
+}
+
+.download-card strong,
+.download-card span {
+  display: block;
+}
+
+.download-card strong {
+  color: var(--accent-dark);
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.download-card span {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
 .link-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -504,12 +561,18 @@ footer {
   .link-grid {
     grid-template-columns: 1fr;
   }
+
+  .download-section {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
 }
 
 @media (min-width: 761px) and (max-width: 980px) {
   .marketing-hero,
   .credibility-strip,
   .nurse-made,
+  .download-section,
   .support-layout {
     grid-template-columns: 1fr;
   }
