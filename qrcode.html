@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descarregar Vencimento | QR Code</title>
+  <meta name="description" content="Página de download da app Vencimento para quem leu o QR code.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.jpeg" alt="" width="34" height="34">
+      <span>Vencimento</span>
+    </a>
+    <nav aria-label="Navegação principal">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html">Termos</a>
+      <a href="ajuda.html">Ajuda</a>
+      <a href="suporte.html">Suporte</a>
+    </nav>
+  </header>
+
+  <main class="qr-page">
+    <section class="qr-hero" aria-label="Descarregar a app Vencimento">
+      <div class="qr-copy">
+        <p class="eyebrow">QR Code</p>
+        <h1>Descarrega a app Vencimento.</h1>
+        <p class="lead">Organiza turnos, acompanha suplementos e consulta uma estimativa clara do teu recibo mensal no iPhone.</p>
+        <div class="hero-actions">
+          <a
+            id="app-store-link"
+            class="primary-action app-store-action"
+            href="https://apps.apple.com/search?term=Vencimento&utm_source=qr_code&utm_medium=offline&utm_campaign=download_qr"
+            target="_blank"
+            rel="noopener"
+            data-analytics-event="app_store_click"
+          >
+            Descarregar na App Store
+          </a>
+          <a class="secondary-action" href="ajuda.html">Ver ajuda</a>
+        </div>
+      </div>
+
+      <div class="qr-download-panel">
+        <img src="assets/logo.jpeg" alt="Logo da app Vencimento" width="118" height="118">
+        <div>
+          <strong>Vencimento</strong>
+          <span>App iOS para profissionais que trabalham por turnos.</span>
+        </div>
+        <ul class="qr-benefits" aria-label="Funcionalidades principais">
+          <li>Calendário de turnos</li>
+          <li>Estimativa de vencimento</li>
+          <li>Recibo e suplementos</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="qr-info-grid" aria-label="Informação útil">
+      <article>
+        <span class="feature-icon">01</span>
+        <h2>Feita para iPhone</h2>
+        <p>O botão abre a App Store num novo separador para instalares a app no dispositivo iOS.</p>
+      </article>
+      <article>
+        <span class="feature-icon">02</span>
+        <h2>Privacidade primeiro</h2>
+        <p>Os dados profissionais registados na app ficam guardados localmente no dispositivo.</p>
+      </article>
+      <article>
+        <span class="feature-icon">03</span>
+        <h2>Origem identificada</h2>
+        <p>O link usa parâmetros UTM para separar visitas e cliques vindos deste QR code.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vencimento. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var source = "qr_code";
+      var campaign = "download_qr";
+
+      window.vencimentoQrAnalytics = {
+        source: source,
+        campaign: campaign,
+        page: window.location.pathname
+      };
+
+      function track(eventName) {
+        if (typeof window.plausible === "function") {
+          window.plausible(eventName, { props: window.vencimentoQrAnalytics });
+        }
+
+        if (typeof window.gtag === "function") {
+          window.gtag("event", eventName, {
+            event_category: "qr_code",
+            event_label: campaign
+          });
+        }
+      }
+
+      track("qr_landing_view");
+
+      var appStoreLink = document.querySelector("[data-analytics-event]");
+      if (appStoreLink) {
+        appStoreLink.addEventListener("click", function () {
+          track(appStoreLink.dataset.analyticsEvent);
+        });
+      }
+    }());
+  </script>
+</body>
+</html>
